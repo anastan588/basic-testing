@@ -22,9 +22,10 @@ describe('throttledGetDataFromApi', () => {
 
   test('should perform request to correct provided url', async () => {
     const relativePath = '/posts';
+    const baseUrl = 'https://jsonplaceholder.typicode.com';
     const axiosCreate = jest.spyOn(axios, 'create');
     const axiosClient = axios.create({
-      baseURL: 'https://jsonplaceholder.typicode.com',
+      baseURL: baseUrl,
     });
     axiosCreate.mockReturnValue(axiosClient);
     const axiosClientGet = jest.spyOn(axiosClient, 'get');
