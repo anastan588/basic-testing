@@ -39,7 +39,6 @@ export const simpleCalculator = (
         throw new Error('Something went wrong!');
     }
   }
-
   return null;
 };
 
